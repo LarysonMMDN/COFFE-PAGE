@@ -1,0 +1,156 @@
+/* ==========================
+   Variáveis globais e base
+========================== */
+:root {
+    /* Cores e borda reutilizáveis */
+    --main-color: #d3ad7f;
+    --black: #13131a;
+    --bg: #010103;
+    --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+
+    /* Define 1rem como 10px para facilitar cálculos */
+    font-size: 10px;
+}
+
+/* ==========================
+   Reset e configurações globais
+========================== */
+* {
+    /* Remove margens e paddings padrão do navegador */
+    margin: 0;
+    padding: 0;
+
+    /* Remove contorno de elementos focados */
+    outline: none;
+
+    /* Remove bordas padrões */
+    border: none;
+
+    /* Remove sublinhado de links */
+    text-decoration: none;
+
+    /* Transforma a primeira letra em maiúscula */
+    text-transform: capitalize;
+
+    /* Adiciona transição suave para animações */
+    transition: 0.2s linear;
+
+    /* Fonte padrão para todo o site */
+    font-family: "Roboto", sans-serif;
+}
+
+/* Define cor de fundo do corpo */
+body {
+    background-color: var(--bg);
+}
+
+/* ==========================
+   Seções gerais
+========================== */
+section {
+    /* Espaçamento interno da seção */
+    padding: 3rem 2rem;
+
+    /* Centraliza a seção na tela */
+    margin: 0 auto;
+
+    /* Largura máxima da seção */
+    max-width: 1200px;
+}
+
+/* ==========================
+   Cabeçalho fixo (Header)
+========================== */
+.header {
+    position: fixed; /* Fixa no topo da tela */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99; /* Fica acima de outros elementos */
+    border-bottom: var(--border); /* Linha inferior */
+}
+
+.header section {
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    justify-content: space-between; /* Espaço entre elementos */
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/* ==========================
+   Navegação (Menu)
+========================== */
+.navbar a {
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.navbar a:hover {
+    color: var(--main-color); /* Cor ao passar o mouse */
+    border-bottom: 0.1rem solid var(--main-color);
+    padding-bottom: 0.5rem;
+    font-size: 2rem; /* Destaque no hover */
+}
+
+/* ==========================
+   Ícones interativos
+========================== */
+.icons img {
+    margin: 1rem;
+    cursor: pointer; /* Ícone vira clicável */
+}
+
+.icons img:hover {
+    width: 40px;
+    height: 40px; /* Aumenta ao passar o mouse */
+}
+
+/* ==========================
+   Botão reutilizável
+========================== */
+.btn {
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    margin-top: 1rem;
+}
+
+/* ==========================
+   Seção Home (Página inicial)
+========================== */
+.home-container {
+    background: url('./img/home-img.jpg'); /* Imagem de fundo */
+    height: 100vh; /* Ocupa toda a altura da tela */
+    background-size: cover;
+    background-position: center;
+}
+
+.home-container section {
+    display: flex;
+    align-items: center;
+    min-height: 100vh; /* Alinha ao centro da tela */
+}
+
+/* ==========================
+   Conteúdo textual da Home
+========================== */
+.content {
+    max-width: 60rem;
+}
+
+.content h3 {
+    color: #fff;
+    font-size: 6rem; /* Título grande */
+}
+
+.content p {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 100;
+    line-height: 1.8;
+    padding: 1rem 0;
+    display: inline-block;
+}
